@@ -20,7 +20,29 @@
 
 Project ini bertujuan untuk menganalisis performa penjualan ElectroMax selama periode 2023–2025 serta memahami faktor yang berkaitan dengan perubahan revenue dan perilaku pelanggan.
 
-Analisis dilakukan melalui dua fokus utama:
+## Executive Summary
+
+- Perubahan revenue berkaitan dengan jumlah Transaksi tetapi AOV menjadi faktor penting ketika transaksi meningkat tetapi revenue turun
+   pada periode Mei AOV YoY(-6,99%) dan Juni AOV YoY (-5,60%)
+- Transaction YoY memiliki hubungan paling kuat dengan Revenue YoY (r = 0.747).
+- Customer segment Declining menjadi prioritas utama retention karena berkontribusi 41.75% terhadap revenue 2024.
+- RFM-based risk scoring belum menunjukkan kemampuan yang konsisten dalam mengidentifikasi pelanggan At Risk pada 2025.
+
+## Dataset
+
+Dataset terdiri dari data transaksi penjualan ElectroMax selama periode 2023–2025.
+
+Data digunakan untuk menganalisis:
+
+- dim_karyawan
+- dim_pelangan
+- dim_produk
+- dim_toko
+- dim_promosi
+- dim_waktu
+- fact_penjualan
+---
+#### Analisis dilakukan melalui dua fokus utama:
 
 ### 1. **Sales & Revenue Analysis**
    - Menganalisis perkembangan revenue
