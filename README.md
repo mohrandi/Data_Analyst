@@ -116,7 +116,17 @@ Oleh karena itu, risk score tersebut lebih tepat digunakan sebagai indikator eks
 - Business Recommendation
 
 ---
+## Executive Summary
 
+- Quantity pada Tabel orders terdapat 252 baris (7.6%) Anomali nilai 0 dan lebih kecil darinya dan terdapat Outlier 74 baris (2.2) jauh dari pola normal nya
+  di anggap sebagai kesalahan input dan di tandai dengan Flag
+- pada kolom ship_date terdapat Anomali data quality, nilai null 31 (4.62%) dengan status Completed, 
+  data nya tetap di pertahankan di dataset untuk transparansi. Ditandai dengan Flag
+- number phone pada Tabel customers terdapat inkonsistensi format lintas negara kolom ini di exclude dalam clening
+  karna tidak di gunakan dalam analysis
+- 
+
+---
 ## Data Cleaning Retail Mart
 
 ### Tabel orders
