@@ -140,6 +140,8 @@ karna tidak di gunakan dalam analysis
 
 ***Anomali di Data, tidak langsung dihapus atau ditebak melainkan di buat flag. Keputusan untuk mengisi atau membuang data yang bermasalah tergantung kebutuhan analisis, flag memberi transparansi dan fleksibilitas ke pengguna data di tahap berikutnya, tanpa menyembunyikan masalah aslinya.***
 
+Query Data Cleaning Retail Mart  [HERE](./sql/SQL-RetailMart_Clening.sql).
+
 ---
 
 Project ini dibuat sebagai portfolio untuk menunjukkan kemampuan melakukan analisis data end-to-end, mulai dari data preparation, data modeling, KPI calculation, statistical analysis, customer segmentation, rule-based modeling, model validation, hingga business recommendation.
