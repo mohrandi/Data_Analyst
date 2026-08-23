@@ -11,8 +11,8 @@
 
 | File | Description |
 |---|---|
-| [Excel Analysis](./Retail%20-%20ElectroMax.xlsx) | Data preparation and analysis |
-| [Power BI Dashboard](./dashboard/analysis/Retail%20-%20ElectroMax.pbix) | Interactive dashboard |
+| [Excel Analysis](./analysis/Retail%20-%20ElectroMax.xlsx) | Data preparation and analysis |
+| [Power BI Dashboard](./dashboard/Retail%20-%20ElectroMax.pbix) | Interactive dashboard |
 | [Dashboard Preview](./assets/ElectroMax_Dashboard.gif) | Dashboard GIF preview |
 ---
 
