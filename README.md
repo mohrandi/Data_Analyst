@@ -3,7 +3,7 @@
 ## Dashboard Preview
 
 <p align="center">
-  <img src="./ElectroMax_Dashboard.gif" width="900">
+  <img src="./assets/ElectroMax_Dashboard.gif" width="900">
 </p>
 
 ---
@@ -12,8 +12,8 @@
 | File | Description |
 |---|---|
 | [Excel Analysis](./Retail%20-%20ElectroMax.xlsx) | Data preparation and analysis |
-| [Power BI Dashboard](./Retail%20-%20ElectroMax.pbix) | Interactive dashboard |
-| [Dashboard Preview](./ElectroMax_Dashboard.gif) | Dashboard GIF preview |
+| [Power BI Dashboard](./dashboard/analysis/Retail%20-%20ElectroMax.pbix) | Interactive dashboard |
+| [Dashboard Preview](./assets/ElectroMax_Dashboard.gif) | Dashboard GIF preview |
 ---
 
 ## Tentang Project
