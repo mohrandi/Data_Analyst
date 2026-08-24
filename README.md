@@ -124,20 +124,20 @@ Oleh karena itu, risk score tersebut lebih tepat digunakan sebagai indikator eks
   data nya tetap di pertahankan di dataset untuk transparansi. Ditandai dengan Flag
 - number phone pada Tabel customers terdapat inkonsistensi format lintas negara kolom ini di exclude dalam clening
   karna tidak di gunakan dalam analysis
-- 
+- 225 customer (27.6% dari total) memiliki ***membership_type*** tanpa signup_date. Ditandai dengan Flag
 
 ---
 ## Data Cleaning Retail Mart
 
 ### Tabel orders
 
-#### Before Cleaning
+- Before Cleaning
 
 <p align="center">
   <img src="./assets/RetailMart_orders_before.gif" width="900">
 </p>
 
-#### After Cleaning 
+- After Cleaning 
 
 <p align="center">
   <img src="./assets/RetailMart_orders_after.gif" width="900">
@@ -153,13 +153,13 @@ data nya tetap di pertahankan di dataset untuk transparansi. Ditandai dengan Fla
 
 ### Tabel Customers
 
-#### Before Cleaning
+- Before Cleaning
 
 <p align="center">
   <img src="./assets/RetailMart_customers_before.gif" width="900">
 </p>
 
-#### After Cleaning
+- After Cleaning
 
 <p align="center">
   <img src="./assets/RetailMart_customers_after.gif" width="900">
