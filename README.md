@@ -3,7 +3,7 @@
 ## Dashboard Preview
 
 <p align="center">
-  <img src="./assets/ElectroMax_Dashboard.gif" width="900">
+  <img src="./assets/ElectroMax_Dashboard_Revisi.gif" width="900">
 </p>
 
 ---
