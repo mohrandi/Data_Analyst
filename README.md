@@ -18,6 +18,11 @@ Project Power BI ini berfokus pada kinerja penjualan, perilaku customer, dan per
 | [Excel Analysis](./analysis/Retail%20-%20ElectroMax.xlsx) | Data preparation and analysis |
 | [Power BI Dashboard](./dashboard/Electro%20Max%20-%20repair.pbix) | Interactive dashboard |
 | [Dashboard Preview](./assets/ElectroMax_Dashboard.gif) | Dashboard GIF preview |
+
+## Resume
+
+📄 [Download My Resume](./cv/Resume.docx)
+
 ---
 
 ## Tentang Project
