@@ -4,13 +4,15 @@
 ## Executive Summary
 
 Project Power BI ini berfokus pada kinerja penjualan, perilaku customer, dan perpindahan segment customer. Dashboard menampilkan KPI utama seperti Net Revenue, AOV, Transaction, dan YoY Growth, dilanjutkan dengan RFM Customer Segmentation serta analisis Customer Migration 2024–2025 untuk melihat perubahan dan pergerakan customer antar-segment.
+--
+
 ## Dashboard Preview
 
 <p align="center">
   <img src="./assets/ElectroMax_Dashboard_Revisi.gif" width="900">
 </p>
 
----
+
 ## Project Files
 
 | File | Description |
