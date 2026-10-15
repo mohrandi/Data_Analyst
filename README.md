@@ -1,37 +1,31 @@
-# ElectroMax Sales, Revenue & Customer Behavioral Analysis
-
 ## 1.Executive Summary
 
-### Customer Retention & Behavior Analysis — Power BI
+### Dashboard Customer Retention & Behavior Analysis — Power BI
 
 ### Tujuan
 
-Membantu tim CRM memahami retensi, frekuensi transaksi, penggunaan produk, dan hubungan kepuasan dengan transaksi berulang
+**Membantu tim CRM memahami retensi, frekuensi transaksi, penggunaan produk, dan hubungan kepuasan dengan transaksi berulang**
 
 ### Hasil Utama
 
-86,67% pelanggan bertransaksi berulang (130 dari 150)
+**86,67% pelanggan bertransaksi berulang (130 dari 150)
 Rata-rata jeda antartransaksi 12,26 hari
 40 pelanggan bertransaksi 5 kali atau lebih, 20 pelanggan hanya sekali
 Rata-rata kepuasan 3,73 / 5 dengan tingkat penyelesaian survei 92%
-Elektronik, Kebutuhan Harian, Musiman, dan Sembako dibeli 73-83 pelanggan, jauh di atas Aksesoris dan Rumah Tangga (44 pelanggan)
+Elektronik, Kebutuhan Harian, Musiman, dan Sembako dibeli 73-83 pelanggan, jauh di atas Aksesoris dan Rumah Tangga (44 pelanggan)**
 
 ### Alur Proyek
 
-Data sintetis (FastAPI + Faker) → n8n → PostgreSQL (Supabase) → SQL view → Power BI
-
-### Dashboard
-
-3 halaman: Overview, Customer Retention, Product Usage & Satisfaction
+**Data sintetis (FastAPI + Faker) → n8n → PostgreSQL (Supabase) → SQL view → Power BI**
 
 ### Refresh Otomatis
 
-n8n memasukkan data baru setiap hari
-Power BI Service me-refresh dataset 2 kali sehari
+**n8n memasukkan data baru setiap hari
+Power BI Service me-refresh dataset 2 kali sehari**
 
 ### Tools
 
-SQL, PostgreSQL, Power BI (DAX), n8n, Python
+**SQL, PostgreSQL, Power BI (DAX), n8n, Python**
 
 ## Dashboard Preview
 
