@@ -1,13 +1,42 @@
 # ElectroMax Sales, Revenue & Customer Behavioral Analysis
 
-## Executive Summary
+## 1.Executive Summary
 
-Project Power BI ini berfokus pada kinerja penjualan, perilaku customer, dan perpindahan segment customer. Dashboard menampilkan KPI utama seperti Net Revenue, AOV, Transaction, dan YoY Growth, dilanjutkan dengan RFM Customer Segmentation serta analisis Customer Migration 2024–2025 untuk melihat perubahan dan pergerakan customer antar segment.
+### Customer Retention & Behavior Analysis — Power BI
+
+### Tujuan
+
+Membantu tim CRM memahami retensi, frekuensi transaksi, penggunaan produk, dan hubungan kepuasan dengan transaksi berulang
+
+### Hasil Utama
+
+86,67% pelanggan bertransaksi berulang (130 dari 150)
+Rata-rata jeda antartransaksi 12,26 hari
+40 pelanggan bertransaksi 5 kali atau lebih, 20 pelanggan hanya sekali
+Rata-rata kepuasan 3,73 / 5 dengan tingkat penyelesaian survei 92%
+Elektronik, Kebutuhan Harian, Musiman, dan Sembako dibeli 73-83 pelanggan, jauh di atas Aksesoris dan Rumah Tangga (44 pelanggan)
+
+### Alur Proyek
+
+Data sintetis (FastAPI + Faker) → n8n → PostgreSQL (Supabase) → SQL view → Power BI
+
+### Dashboard
+
+3 halaman: Overview, Customer Retention, Product Usage & Satisfaction
+
+### Refresh Otomatis
+
+n8n memasukkan data baru setiap hari
+Power BI Service me-refresh dataset 2 kali sehari
+
+### Tools
+
+SQL, PostgreSQL, Power BI (DAX), n8n, Python
 
 ## Dashboard Preview
 
 <p align="center">
-  <img src="./assets/ElectroMax_Dashboard_Revisi.gif" width="900">
+  <img src="./assets/1015.gif" width="900">
 </p>
 
 
@@ -17,7 +46,7 @@ Project Power BI ini berfokus pada kinerja penjualan, perilaku customer, dan per
 |---|---|
 | [Excel Analysis](./analysis/Retail%20-%20ElectroMax.xlsx) | Data preparation and analysis |
 | [Power BI Dashboard](./dashboard/Electro%20Max%20-%20repair.pbix) | Interactive dashboard |
-| [Dashboard Preview](./assets/ElectroMax_Dashboard.gif) | Dashboard GIF preview |
+| [Dashboard Preview](./assets/1015.gif) | Dashboard GIF preview |
 
 ## Resume
 
