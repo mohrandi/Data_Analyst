@@ -156,6 +156,13 @@ karna tidak di gunakan dalam analysis
 
 ***Anomali di Data, tidak langsung dihapus atau ditebak melainkan di buat flag. Keputusan untuk mengisi atau membuang data yang bermasalah tergantung kebutuhan analisis, flag memberi transparansi dan fleksibilitas ke pengguna data di tahap berikutnya, tanpa menyembunyikan masalah aslinya.***
 
+## Project Files
+
+| File | Description |
+|---|---|
+| [File Dirty](./data/raw/RetailMart%20-%20customers.csv) | File Data Clening |
+| [File Dirty](./data/raw/RetailMart%20-%20orders.csv) | File Data Clening |
+
 Query Data Cleaning Retail Mart  [HERE](./sql/SQL-RetailMart_Clening.sql).
 
 ---
