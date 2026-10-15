@@ -39,7 +39,7 @@ Power BI Service me-refresh dataset 2 kali sehari**
 | File | Description |
 |---|---|
 | [Dashboard Preview](./assets/1015.gif) | Dashboard GIF preview |
-| [Report Preview](./assets/analisis_revenue.gif) | Report File PPTX |
+| [Report Preview](./analysis/Presentation1.pptx) | Report File PPTX |
 | [File Analysis](./data/raw/Retail%20-%20Electromax%20dirty.xlsx) | File Used |
 
 ## Resume
