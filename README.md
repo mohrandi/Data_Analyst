@@ -1,133 +1,106 @@
-# ElectroMax Sales, Revenue & Customer Behavioral Analysis
+## 1.Executive Summary
 
-## Executive Summary
+### Dashboard Customer Retention & Behavior Analysis — Power BI
 
-Project Power BI ini berfokus pada kinerja penjualan, perilaku customer, dan perpindahan segment customer. Dashboard menampilkan KPI utama seperti Net Revenue, AOV, Transaction, dan YoY Growth, dilanjutkan dengan RFM Customer Segmentation serta analisis Customer Migration 2024–2025 untuk melihat perubahan dan pergerakan customer antar segment.
+### Tujuan
+
+**Membantu tim CRM memahami retensi, frekuensi transaksi, penggunaan produk, dan hubungan kepuasan dengan transaksi berulang**
+
+### Hasil Utama
+
+**86,67% pelanggan bertransaksi berulang (130 dari 150)
+Rata-rata jeda antartransaksi 12,26 hari
+40 pelanggan bertransaksi 5 kali atau lebih, 20 pelanggan hanya sekali
+Rata-rata kepuasan 3,73 / 5 dengan tingkat penyelesaian survei 92%
+Elektronik, Kebutuhan Harian, Musiman, dan Sembako dibeli 73-83 pelanggan, jauh di atas Aksesoris dan Rumah Tangga (44 pelanggan)**
+
+### Alur Proyek
+
+**Data sintetis (FastAPI + Faker) → n8n → PostgreSQL (Supabase) → SQL view → Power BI**
+
+### Refresh Otomatis
+
+**n8n memasukkan data baru setiap hari
+Power BI Service me-refresh dataset 2 kali sehari**
+
+### Tools
+
+**SQL, PostgreSQL, Power BI (DAX), n8n, Python**
 
 ## Dashboard Preview
 
 <p align="center">
-  <img src="./assets/ElectroMax_Dashboard_Revisi.gif" width="900">
+  <img src="./assets/1015.gif" width="900">
 </p>
 
-
-## Project Files
-
-| File | Description |
-|---|---|
-| [Excel Analysis](./analysis/Retail%20-%20ElectroMax.xlsx) | Data preparation and analysis |
-| [Power BI Dashboard](./dashboard/Electro%20Max%20-%20repair.pbix) | Interactive dashboard |
-| [Dashboard Preview](./assets/ElectroMax_Dashboard.gif) | Dashboard GIF preview |
 
 ## Resume
 
 📄 [Download My Resume](./cv/Resume.docx)
 
 ---
+## 2.Executive Summary
 
-## Tentang Project
+### Analisis Faktor Perubahan Revenue 2023-2025
 
-Project ini bertujuan untuk menganalisis performa penjualan ElectroMax selama periode 2023–2025 serta memahami faktor yang berkaitan dengan perubahan revenue dan perilaku pelanggan.
+**Pertanyaan**
 
----
-## Executive Summary
+- Faktor apa yang paling memengaruhi kenaikan dan penurunan revenue perusahaan?
 
-- Perubahan revenue berkaitan dengan jumlah Transaksi tetapi AOV menjadi faktor penting ketika transaksi meningkat tetapi revenue turun
-   pada periode Mei AOV YoY(-6,99%) dan Juni AOV YoY (-5,60%)
-- Transaction YoY memiliki hubungan paling kuat dengan Revenue YoY (r = 0.747).
-- Customer segment Declining menjadi prioritas utama retention karena berkontribusi 41.75% terhadap revenue 2024.
-- RFM-based risk scoring belum menunjukkan kemampuan yang konsisten dalam mengidentifikasi pelanggan At Risk pada 2025.
+### Hasil Utama
 
----
-## Dataset
+- Revenue Rp82,28 miliar (2023), naik 1,8% jadi Rp83,72 miliar (2024), lalu turun 3,1% jadi Rp81,09 miliar (2025)
+- Perubahan revenue lebih dipengaruhi AOV daripada jumlah transaksi:
+   2024: AOV naik 1,5%, transaksi hanya naik 0,2%
+   2025: AOV turun 2,5%, transaksi turun 0,6%
+- Kenaikan AOV 2024 terutama didorong unit per transaksi (71,4%)
+- Penurunan AOV 2025 terutama berasal dari realisasi harga (36,6%), diikuti harga list rata-rata (32,7%) dan unit per transaksi (30,7%)
+- Dari sisi promo, hilangnya Cashback (Rp1,73 miliar) menjadi penyebab utama penurunan 2025, diikuti Tanpa Promosi dan Diskon
+- Bundling satu-satunya yang naik di 2025 (Rp208 juta) dan menahan penurunan total
 
-Dataset terdiri dari data transaksi penjualan ElectroMax selama periode 2023–2025.
+### Rekomendasi
 
-Data digunakan untuk menganalisis:
+- Evaluasi promo Cashback lebih dulu, karena menentukan revenue 2024 dan 2025
+- Pulihkan AOV dengan mengendalikan diskon, memperkuat penjualan model premium, dan menaikkan unit per transaksi
+- Jadikan Bundling kandidat utama untuk menaikkan unit per transaksi
 
-- dim_karyawan
-- dim_pelangan
-- dim_produk
-- dim_toko
-- dim_promosi
-- dim_waktu
-- fact_penjualan
----
-#### Analisis dilakukan melalui dua fokus utama:
 
-### 1. **Sales & Revenue Analysis**
-   - Menganalisis perkembangan revenue
-   - Menganalisis korelasi YoY
-   - Menganalisis AOV
-   - Mengidentifikasi faktor yang berkaitan dengan perubahan revenue
+## Report Preview
 
-#### pertanyaan
-
-**Faktor apa yang paling berkaitan dengan penurunan atau peningkatan revenue perusahaan?**
-
-#### insight
-
-Perubahan revenue paling sering berkaitan dengan perubahan transaksi. Namun, AOV menjadi faktor penting pada periode tertentu,
-terutama ketika transaksi meningkat tetapi revenue tetap menurun seperti Mei dan Juni 2025.
-
-#### rekomendasi
-
-Prioritaskan pertumbuhan transaksi sebagai pendorong utama pertumbuhan revenue, karena Transaction YoY memiliki korelasi terkuat dengan Net Revenue YoY (r = 0,747).
-Meski demikian, pertumbuhan transaksi perlu dibarengi dengan strategi untuk menjaga AOV, terutama melalui bundling, upselling, dan penetapan ambang batas promosi yang tepat sasaran.
-Penurunan revenue yang signifikan pada Oktober 2025 perlu diselidiki lebih lanjut berdasarkan channel, produk, dan toko untuk mengidentifikasi sumber utama hilangnya transaksi.
+<p align="center">
+  <img src="./assets/analisis_revenue.gif" width="900">
+</p>
 
 ---
-
-### 2. **Customer Behavioral & Retention Analysis**
-   - RFM Analysis
-   - Mengidentifikasi perubahan perilaku pelanggan
-   - Membuat rule-based customer risk scoring
-   - Membandingkan Risk Score 2024 dengan actual customer behavior 2025
-   - Mengevaluasi kemampuan awal risk scoring dalam mengidentifikasi customer yang mengalami penurunan aktivitas
-
-#### pertanyaan
-
-**Bagaimana perubahan perilaku pembelian pelanggan dari 2024 ke 2025 dapat digunakan untuk mengidentifikasi pelanggan yang berisiko churn,
-mengukur potensi dampak terhadap revenue, dan menentukan prioritas strategi retention?**
-
-#### insight & rekomedasi
-
-Analisis menunjukkan bahwa kelompok **Declining** merupakan prioritas utama retention karena mencakup 38,58% pelanggan dan berkontribusi 41,75% terhadap revenue 2024
-Sementara itu, kelompok **At Risk** memiliki penurunan frequency paling tajam sebesar 39,30%,
-sehingga memerlukan intervensi re-engagement untuk mencegah penurunan lebih lanjut.
-Di sisi lain, kelompok **Increasing** yang mencakup 37,24% pelanggan dengan pertumbuhan frequency 29,46% merupakan peluang untuk strategi upselling dan cross-selling.
-
-- Eksperimen risk scoring berbasis RFM 2024 belum menunjukkan kemampuan yang konsisten dalam memprediksi pelanggan At Risk pada 2025.
-Oleh karena itu, risk score tersebut lebih tepat digunakan sebagai indikator eksploratif, bukan sebagai model prediksi churn final.
-
 
 ## Tools Used in Project
 
-- Google BigQuery
 - Microsoft Excel
 - Power Query
 - Power Pivot
 - DAX
-- Power BI
+- Power Point
 
 ## Skills Used in Project
 
 - Data Profiling
 - Data Cleaning
-- Data Transformation
-- Data Modeling
-- KPI Analysis
-- RFM Analysis
-- Correlation Analysis
-- Customer Segmentation
-- Rule-Based Risk Scoring
-- Model Evaluation
-- Business Analysis
-- Data Visualization
-- Business Recommendation
+- Dekomposisi revenue: Revenue = Jumlah Transaksi × AOV, untuk memisahkan pengaruh volume dari nilai per transaksi
+- Dekomposisi AOV: AOV = Harga List Rata-rata × Realisasi Harga × Unit per Transaksi, untuk menemukan faktor penggerak tiap tahun
+- Analisis kontribusi: menghitung efek tiap faktor dalam rupiah dan persen terhadap total perubahan
+- Perbandingan year-over-year: 2023 ke 2024 dan 2024 ke 2025
+- Analisis promo: kontribusi Bundling, Cashback, Diskon, dan Tanpa Promosi terhadap perubahan revenue
+
+## Project Files
+
+| File | Description |
+|---|---|
+| [Report Preview](./analysis/Presentation1.pptx) | Report File PPTX |
+| [File Analysis](./data/raw/Retail%20-%20Electromax%20dirty.xlsx) | File Used |
 
 ---
-## Executive Summary
+
+## 3.Executive Summary
 
 - Quantity pada Tabel orders terdapat 252 baris (7.6%) Anomali nilai 0 dan lebih kecil darinya dan terdapat Outlier 74 baris (2.2) jauh dari pola normal nya
   di anggap sebagai kesalahan input dan di tandai dengan Flag
@@ -182,6 +155,13 @@ karna tidak di gunakan dalam analysis
 - 225 customer (27.6% dari total) memiliki ***membership_type*** tanpa signup_date. Distribusi merata di seluruh tier (Platinum 27.1%, Bronze 26.2%, Silver 23.6%, Gold 23.1%) menunjukkan anomali ini bersifat sistemik bukan terkait tier tertentu kemungkinan besar berasal dari proses pencatatan signup yang tidak konsisten atau migrasi data historis. Ditandai dengan Flag data_completeness_flag
 
 ***Anomali di Data, tidak langsung dihapus atau ditebak melainkan di buat flag. Keputusan untuk mengisi atau membuang data yang bermasalah tergantung kebutuhan analisis, flag memberi transparansi dan fleksibilitas ke pengguna data di tahap berikutnya, tanpa menyembunyikan masalah aslinya.***
+
+## Project Files
+
+| File | Description |
+|---|---|
+| [File Dirty](./data/raw/RetailMart%20-%20customers.csv) | File Data Clening |
+| [File Dirty](./data/raw/RetailMart%20-%20orders.csv) | File Data Clening |
 
 Query Data Cleaning Retail Mart  [HERE](./sql/SQL-RetailMart_Clening.sql).
 
