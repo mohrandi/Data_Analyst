@@ -36,7 +36,7 @@ Power BI Service me-refresh dataset 2 kali sehari**
 
 ## Resume
 
-📄 [Download My Resume](./cv/Resume.docx)
+📄 [My Resume](./cv/Resume_ATS.docx)
 
 ---
 ## 2.Executive Summary
